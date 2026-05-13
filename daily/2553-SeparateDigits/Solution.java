@@ -5,7 +5,7 @@ class Solution {
     public static int[] separateDigits(int[] nums) {
         List<Integer> res = new ArrayList<>();
         // Loop through each number in the input array
-        for(int i: nums) {
+        for (int i : nums) {
             // Temporary list to hold digits of the current number
             List<Integer> tmp = new ArrayList<>();
             // Extract digits one by one (from last digit to first)
@@ -20,14 +20,14 @@ class Solution {
         }
 
         int[] answer = new int[res.size()];
-        for(int i=0; i<res.size(); i++) {
+        for (int i = 0; i < res.size(); i++) {
             answer[i] = res.get(i);
         }
         return answer;
     }
 
     public static void main(String[] args) {
-        int[] nums = {13,25,83,77};
+        int[] nums = {13, 25, 83, 77};
         int answer[] = separateDigits(nums);
         System.out.println("The separation of each integer in nums is" + Arrays.toString(answer));
     }
